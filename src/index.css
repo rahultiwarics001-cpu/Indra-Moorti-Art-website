@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* =========================
+   THEME VARIABLES (EXACT)
+========================= */
+:root {
+  --background: 40 20% 97%;
+  --foreground: 60 4% 17%;
+  --primary: 32 46% 60%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 40 10% 90%;
+  --secondary-foreground: 60 4% 17%;
+  --border: 40 10% 85%;
+  --card: 0 0% 100%;
+  --card-foreground: 60 4% 17%;
+  --muted: 40 10% 90%;
+  --muted-foreground: 60 4% 40%;
+  --accent: 32 46% 60%;
+  --accent-foreground: 0 0% 100%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 100%;
+  --radius: 0rem;
+
+  --app-font-sans: 'Playfair Display', serif;
+}
+
+/* =========================
+   DARK MODE
+========================= */
+.dark {
+  --background: 60 4% 12%;
+  --foreground: 40 20% 97%;
+  --border: 60 4% 20%;
+  --card: 60 4% 15%;
+  --card-foreground: 40 20% 97%;
+}
+
+/* =========================
+   BASE STYLES
+========================= */
+@layer base {
+  * {
+    border-color: hsl(var(--border));
+  }
+
+  body {
+    font-family: var(--app-font-sans);
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    margin: 0;
+  }
+}
+
+/* =========================
+   UTILITY ENHANCEMENTS
+========================= */
+@layer utilities {
+
+  /* Smooth hover lift */
+  .hover-elevate {
+    transition: all 0.3s ease;
+  }
+
+  .hover-elevate:hover {
+    transform: translateY(-4px);
+  }
+
+  /* Button style */
+  .btn-gold {
+    background: hsl(var(--primary));
+    color: white;
+    padding: 10px 18px;
+    border-radius: var(--radius);
+    transition: 0.3s;
+  }
+
+  .btn-gold:hover {
+    opacity: 0.9;
+  }
+
+  /* Card style */
+  .card {
+    background: hsl(var(--card));
+    color: hsl(var(--card-foreground));
+    border: 1px solid hsl(var(--border));
+    border-radius: var(--radius);
+    padding: 16px;
+  }
+
+}
