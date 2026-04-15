@@ -325,7 +325,7 @@ const allProducts = [
 
     <div style={{ flex: "1", minWidth: "280px" }}>
       <img
-        src="/images/owner.jpg"
+        src="/images/owner.jpeg"
         alt="Owner"
         style={{ width: "100%", borderRadius: "12px" }}
       />
